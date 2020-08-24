@@ -3,7 +3,7 @@ require('../config/connect.php');
 require('../config/session.php');
 if(isset( $_SESSION['login_user'])){
     $tt = $_SESSION['login_user'];
-    $sql = "SELECT track FROM user WHERE email = '$tt'";
+    $sql = "SELECT track FROM users WHERE email = '$tt'";
     $result = mysqli_query($conn, $sql);
     $row =mysqli_fetch_assoc($result);
     $track = $row['track'];
@@ -21,11 +21,11 @@ if(isset( $_SESSION['login_user'])){
  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
 <meta http-equiv="Pragma" content="no-cache" />
 <meta http-equiv="Expires" content="0"/>
- <title>Feedback - 30 Days Of Code</title>
+ <title>Feedback - JSMinna Internship</title>
 </head>
 <body class="flx col">
  <header class="flx row">
-  <span>#30DaysOfCode</span>
+  <span>JSMinna Internship</span>
   <div class="profile flx col">
     <img src="../assets/img/profile.png">
     <ul class="options">
@@ -73,16 +73,16 @@ if(isset( $_SESSION['login_user'])){
         </li>
         <li class="flx row">
           <img src="../assets/img/podium.png" />
-          <a href="https://30daysofcode.xyz/leaderboard">Leaderboard</a>
+          <a href="../leaderboard">Leaderboard</a>
         </li>
         <li class="flx row">
           <img src="../assets/img/twitter.png" />
-          <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2F30daysofcodes.xyz&via=codon&text=Hello%2C%20I%20just%20finished%20my%20task%20for%20....&hashtags=30DaysOfCode%2C%20ECX">Tweet</a>
+          <!-- <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2F30daysofcodes.xyz&via=codon&text=Hello%2C%20I%20just%20finished%20my%20task%20for%20....&hashtags=30DaysOfCode%2C%20ECX">Tweet</a> -->
         </li>
 
         <li class="flx row">
           <img src="../assets/img/whatsapp.png" />
-          <a href="https://30daysofcode.xyz/whatsapp">Support group</a>
+          <a href="https://javascriptminna.com/whatsapp">Support group</a>
         </li>
         <li class="flx row">
           <img src="../assets/img/feedback.png" />

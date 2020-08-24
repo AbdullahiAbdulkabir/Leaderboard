@@ -2,17 +2,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <meta charset="UTF-8">
+<meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <meta http-equiv="X-UA-Compatible" content="ie=edge">
- <title>Sign in - 30 Days of Code</title>
+ <title>Sign in - JSMinna Internship</title>
  <link rel="stylesheet" href="./assets/css/form.css">
  <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon">
- <meta name="description" content="sign in to 30 days of code">
+ <meta name="description" content="sign up for JSMINNA">
  <meta property="og:type" content="website">
- <meta name="keywords" content="30 days of code, sign in, log, in, engineering career expo, ECX, ecx, dsc unilag, code, design, competition">
- <meta property="og:url" content="https://30daysofcode.xyz">
- <meta property="og:site_name" content="30 days of code sign in">
+ <meta name="keywords" content="JSMINNA INTERNSHIP, sign up, create account, Jsminna">
+ <meta property="og:url" content="https://javascriptminna.com/internship.html">
+ <meta property="og:site_name" content="JSMINNA INTERNSHIP">
  <meta property="og:image" content="./assets/img/favicon.png">
 </head>
 <body>
@@ -22,7 +22,7 @@
     if (isset($_POST['submit'])) {
         $username = mysqli_real_escape_string($conn, $_POST['email']);
         $myPassword = mysqli_real_escape_string($conn, $_POST['password']);
-        $sql = "SELECT * FROM user WHERE `email` = '$username'";
+        $sql = "SELECT * FROM users WHERE `email` = '$username'";
         $result = mysqli_query($conn,$sql);
         $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
         //$active = $row['active'];
@@ -60,7 +60,7 @@ else {
 ?>
 
  <main class="body-content flex col">
-  <h1 id="home">30 DAYS OF CODE &amp; DESIGN</h1>
+  <h1 id="home"> <span style="color: #febf10;">JSMINNA </span> INTERNSHIP</h1>
   <img src="./assets/img/lbs.png" alt="learnBuildShare"/>
   <form method="POST" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'])?>">
    <fieldset>

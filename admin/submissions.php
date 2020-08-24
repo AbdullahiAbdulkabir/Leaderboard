@@ -15,11 +15,11 @@ if(isset( $_SESSION['login_user']) && $_SESSION['isAdmin'] == true){
  <link rel="stylesheet" href="../assets/css/submissions.css">
  <link rel="stylesheet" href="../assets/css/responsive.css">
  <link rel="shortcut icon" href="../../assets/img/favicon.png" type="image/x-icon">
- <title>Dashboard - 30 Days Of Code</title>
+ <title>Dashboard - JSMinna Internship</title>
 </head>
 <body class="flx col">
  <header class="flx row">
-  <span>#30DaysOfCode</span>
+  <span>JSMinna Internship</span>
   <div class="profile flx col">
     <img src="../assets/img/profile.png">
     <ul class="options">
@@ -54,7 +54,7 @@ if(isset( $_SESSION['login_user']) && $_SESSION['isAdmin'] == true){
         </li>
         <li class="flx row">
          <img src="../assets/img/podium.png">
-         <a href="https://30daysofcode.xyz/leaderboard">Leaderboard</a>
+         <a href="../leaderboard">Leaderboard</a>
         </li>
         <li class="flx row">
          <img src="../assets/img/twitter.png">
@@ -63,7 +63,7 @@ if(isset( $_SESSION['login_user']) && $_SESSION['isAdmin'] == true){
         </li>
         <li class="flx row">
          <img src="../assets/img/whatsapp.png">
-         <a href="https://30daysofcode.xyz/whatsapp">Support group</a>
+         <a href="https://javascriptminna.com/whatsapp">Support group</a>
          <img class="external" src="../assets/img/external.png" alt="">
         </li>
        </ul>

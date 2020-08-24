@@ -18,11 +18,11 @@ if(isset( $_SESSION['login_user']) && $_SESSION['isAdmin'] == true){
  <!-- <link rel="stylesheet" href="../assets/css/submissions.css"> -->
  <link rel="stylesheet" href="../assets/css/responsive.css">
  <link rel="shortcut icon" href="./../assets/img/favicon.png" type="image/x-icon">
- <title>Dashboard - 30 Days Of Code</title>
+ <title>Dashboard - JSMinna Internship</title>
 </head>
 <body class="flx col">
  <header class="flx row">
-  <span>#30DaysOfCode</span>
+  <span>JSMinna Internship</span>
   <div class="profile flx col">
     <img src="../assets/img/profile.png">
     <ul class="options">
@@ -101,7 +101,7 @@ while($row = $result->fetch_assoc()) {
             $result_up = mysqli_query($conn, $sql_up);
             // $count_up = mysqli_num_rows($result_up);
         }else{
-            $sql_nick = "SELECT * FROM user WHERE email = '$us'";
+            $sql_nick = "SELECT * FROM users WHERE email = '$us'";
             $result_nick = mysqli_query($conn, $sql_nick);
             $row_nick = mysqli_fetch_array($result_nick,MYSQLI_ASSOC);
             $nickname = $row_nick['nickname'];

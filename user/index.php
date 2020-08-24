@@ -16,11 +16,11 @@ if(isset( $_SESSION['login_user'])){
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0"/>
-    <title>30 Days Of Code Dashboard</title>
+    <title>JSMinna Internship Dashboard</title>
   </head>
   <body class="flx col">
     <header class="flx row">
-      <span>#30DaysOfCode</span>
+      <span>JSMinna Internship</span>
       <div class="profile flx col">
         <img src="../assets/img/profile.png" />
         <ul class="options">
@@ -55,15 +55,12 @@ if(isset( $_SESSION['login_user'])){
             </li>
             <li class="flx row">
               <img src="../assets/img/podium.png" />
-              <a href="https://30daysofcode.xyz/leaderboard">Leaderboard</a>
+              <a href="../leaderboard">Leaderboard</a>
             </li>
-            <li class="flx row">
-              <img src="../assets/img/twitter.png" />
-              <a href="">Tweet</a>
-            </li>
+    
             <li class="flx row">
               <img src="../assets/img/whatsapp.png" />
-              <a href="https://30daysofcode.xyz/whatsapp">Support group</a>
+              <a href="https://javascriptminna.com/whatsapp">Support group</a>
             </li>
             <li class="flx row">
               <img src="../assets/img/feedback.png" />
@@ -91,7 +88,7 @@ if(isset( $_SESSION['login_user'])){
           $user_nickname = '';
           $user_track = '';
           $email = $_SESSION['login_user'];
-          $sql = "SELECT * FROM user WHERE email='$email' ORDER BY `score` DESC LIMIT 1";
+          $sql = "SELECT * FROM users WHERE email='$email' ORDER BY `score` DESC LIMIT 1";
           $result = mysqli_query($conn,$sql);
           while($row = mysqli_fetch_assoc($result)) {
               $user_nickname = $row['nickname'];
@@ -144,8 +141,7 @@ if(isset( $_SESSION['login_user'])){
             
             $tracks = [
               'Backend' => 'Backend',
-              'Mobile' => 'Mobile',
-              'ML' => 'ML',
+              'Frontend' => 'Frontend'
             ];
             foreach ($tracks as $track) {
                 $track_submission = "SELECT * FROM submissions WHERE track = '$track' AND points = 0 ORDER BY track";
@@ -161,7 +157,7 @@ if(isset( $_SESSION['login_user'])){
 </div>
         </main>
         <footer class="flx row">
-          <span class="copyw">Copyright &copy; 30DaysOfCode 2020</span>
+          <span class="copyw">Copyright &copy; JSMinna Internship 2020</span>
           <div>
             <a href="">Privacy Policy</a><a href="">Terms &amp; Conditions</a>
           </div>

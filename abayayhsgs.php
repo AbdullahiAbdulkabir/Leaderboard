@@ -1,9 +1,9 @@
 <?php
 include './config/connect.php';
 //i don't know what i am writing tho, i hope it works sha
-    $first ="UPDATE `user` SET `score` = '0' WHERE `score` > 0";
+    $first ="UPDATE `users` SET `score` = '0' WHERE `score` > 0";
     $reset = mysqli_query($conn, $first);
-    $sql = "SELECT email FROM user";
+    $sql = "SELECT email FROM users";
     $result = mysqli_query($conn, $sql);
     $count = mysqli_num_rows($result);
     if ($count > 0) {
@@ -32,7 +32,7 @@ include './config/connect.php';
     }
     function update_total($email, $total){
         global $conn;
-        $query = "UPDATE user SET score = $total WHERE `email` = '$email' ";
+        $query = "UPDATE users SET score = $total WHERE `email` = '$email' ";
         $result = mysqli_query($conn, $query);
         if($conn->query($query)){
             return 1;

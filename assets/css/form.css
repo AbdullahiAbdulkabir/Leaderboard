@@ -31,7 +31,7 @@
             flex-direction: column;
    }
    body {
-    background-color: #283556;
+    background-color: #fff;
     background-image: url(/assets/img/code_paper.svg), url(/assets/img/programmer.svg); 
     background-position: left bottom, right bottom;
     background-repeat: no-repeat, no-repeat;
@@ -47,7 +47,7 @@
    h1 {
     padding: 0 8px 0 8px;
     text-align: center;
-    color: #EFEFFE;
+    color: #010102;
     font-size: 30px;
     font-weight: 800;
     margin-top: 80px;

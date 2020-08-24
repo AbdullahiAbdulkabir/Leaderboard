@@ -19,11 +19,11 @@ if(isset( $_SESSION['login_user']) && $_SESSION['isAdmin'] == true){
  <link rel="stylesheet" href="../assets/css/submissions.css">
  <link rel="stylesheet" href="../assets/css/responsive.css">
  <link rel="shortcut icon" href="../assets/img/favicon.png" type="image/x-icon">
- <title>Dashboard - 30 Days Of Code</title>
+ <title>Dashboard - JSMinna Internship</title>
 </head>
 <body class="flx col">
  <header class="flx row">
-  <span>#30DaysOfCode</span>
+  <span>JSMinna Internship</span>
   <div class="profile flx col">
     <img src="../assets/img/profile.png">
     <ul class="options">
@@ -58,7 +58,7 @@ if(isset( $_SESSION['login_user']) && $_SESSION['isAdmin'] == true){
         </li>
         <li class="flx row">
          <img src="../assets/img/podium.png">
-         <a href="https://30daysofcode.xyz/leaderboard">Leaderboard</a>
+         <a href="../leaderboard">Leaderboard</a>
         </li>
         <li class="flx row">
          <img src="../assets/img/twitter.png">
@@ -67,7 +67,7 @@ if(isset( $_SESSION['login_user']) && $_SESSION['isAdmin'] == true){
         </li>
         <li class="flx row">
          <img src="../assets/img/whatsapp.png">
-         <a href="https://30daysofcode.xyz/whatsapp">Support group</a>
+         <a href="https://javascriptminna.com/whatsapp">Support group</a>
          <img class="external" src="../assets/img/external.png" alt="">
         </li>
        </ul>
@@ -78,7 +78,7 @@ if(isset( $_SESSION['login_user']) && $_SESSION['isAdmin'] == true){
       <main class="flx col">
          <div class="banner flx col">
          <button class="whiteBtn flx row cnt" onclick="rdr(this)">       
-          <a href="update.php"> Update profile </a>
+          <a href="#"> Update profile </a>
           <script>
            function rdr(elm){
             window.location.href = elm.children[0].href
@@ -91,7 +91,7 @@ if(isset( $_SESSION['login_user']) && $_SESSION['isAdmin'] == true){
           $user_nickname = '';
           $user_track = '';
           $email = $_SESSION['login_user'];
-          $sql = "SELECT * FROM user WHERE email='$email' ORDER BY `score` DESC LIMIT 1";
+          $sql = "SELECT * FROM users WHERE email='$email' ORDER BY `score` DESC LIMIT 1";
           $result = mysqli_query($conn,$sql);
           while($row = mysqli_fetch_assoc($result)) {
               $user_nickname = $row['nickname'];
@@ -112,9 +112,7 @@ if(isset( $_SESSION['login_user']) && $_SESSION['isAdmin'] == true){
             $tracks = [
               'Backend' => 'Backend',
               'Frontend' => 'Frontend',
-              'Mobile' => 'Mobile',
-              'ML' => 'ML',
-              'GIS' => 'GIS'
+           
             ];
             foreach ($tracks as $track) {
                 $track_submission = "SELECT * FROM submissions WHERE track = '$track' AND points = 0 ORDER BY track";
@@ -133,7 +131,7 @@ if(isset( $_SESSION['login_user']) && $_SESSION['isAdmin'] == true){
       
      </main>
      <footer class="flx row">
-          <span class="copyw">Copyright &copy; 30DaysOfCode 2020</span>
+          <span class="copyw">Copyright &copy; JSMinna Internship 2020</span>
           <div>
             <a href="">Privacy Policy</a><a href="">Terms &amp; Conditions</a>
           </div>

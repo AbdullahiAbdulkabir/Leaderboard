@@ -22,15 +22,15 @@
       $filter = $_GET['filter'];
       switch ($filter) {
         case 'overall':
-          $sql = "SELECT * FROM user WHERE `isAdmin` = 0 ORDER BY `score` DESC LIMIT 20";
+          $sql = "SELECT * FROM users WHERE `isAdmin` = 0 ORDER BY `score` DESC LIMIT 20";
           break;
         
         default:
-          $sql = "SELECT * FROM user WHERE `isAdmin` = 0 AND `track` ='$filter' ORDER BY `score` DESC LIMIT 20";
+          $sql = "SELECT * FROM users WHERE `isAdmin` = 0 AND `track` ='$filter' ORDER BY `score` DESC LIMIT 20";
           break;
       }
     }else{
-      $sql = "SELECT * FROM user WHERE `isAdmin` = 0 ORDER BY `score` DESC LIMIT 20";
+      $sql = "SELECT * FROM users WHERE `isAdmin` = 0 ORDER BY `score` DESC LIMIT 20";
     }
     $result = mysqli_query($conn,$sql);
     if (mysqli_num_rows($result) > 0) {
@@ -53,7 +53,7 @@
     <head>
       <link rel="stylesheet" href="./index.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-      <link rel="shortcut icon" href="https://30daysofcode.xyz/favicon.png" type="image/x-icon">
+      <link rel="shortcut icon" href="https://javascriptminna.com/favicon.png" type="image/x-icon">
     </head>
     <body>
       <div class="filter">

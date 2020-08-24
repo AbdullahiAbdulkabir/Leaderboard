@@ -24,11 +24,11 @@ if(isset($_POST['submit'])){
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
 <meta http-equiv="Pragma" content="no-cache" />
 <meta http-equiv="Expires" content="0"/>
-    <title>View task - 30 Days Of Code</title>
+    <title>View task - JSMinna Internship</title>
   </head>
   <body class="flx col">
     <header class="flx row">
-      <span>#30DaysOfCode</span>
+      <span>JSMinna Internship</span>
       <div class="profile flx col">
         <img src="../assets/img/profile.png" />
         <ul class="options">
@@ -76,7 +76,7 @@ if(isset($_POST['submit'])){
             </li>
             <li class="flx row">
               <img src="../assets/img/podium.png" />
-              <a href="https://30daysofcode.xyz/leaderboard">Leaderboard</a>
+              <a href="../leaderboard">Leaderboard</a>
             </li>
             <li class="flx row">
               <img src="../assets/img/twitter.png" />
@@ -84,7 +84,7 @@ if(isset($_POST['submit'])){
             </li>
             <li class="flx row">
               <img src="../assets/img/whatsapp.png" />
-              <a href="https://30daysofcode.xyz/whatsapp">Support group</a>
+              <a href="https://javascriptminna.com/whatsapp">Support group</a>
             </li>
             <li class="flx row">
               <img src="../assets/img/feedback.png" />
@@ -98,7 +98,7 @@ if(isset($_POST['submit'])){
         <main class="flx col">
           <form method="POST" class="flx col">
             <legend>
-              #20DaysOfCode <span class="day">Day <?= $days; ?></span>
+              JSMinna Internship <span class="day">Day <?= $days; ?></span>
             </legend>
             
             <div class="fields-container">
@@ -107,16 +107,13 @@ if(isset($_POST['submit'])){
                 <select name="track" value="">
                   <option value="Backend">Backend</option>
                   <option value="Frontend">Frontend</option>
-                  <option value="Mobile">Mobile</option>
-                  <option value="ML">Machine Learning</option>
-                  <option value="GIS">GIS</option>
                 </select>
                 <input type="hidden" name="task_day" value="<?= $days?>" />
               </div>
               <button id="taskDownload" type="submit" name="submit">
                 Check Task
               </button>
-              <a href="https://github.com/geektutor/Leaderboard/blob/master/submission_guide.md">What is an accepted submission?</a>
+              <a href="#">What is an accepted submission?</a>
               <br><br>
             </div>
               <?php if($show == 1){ ?>
@@ -140,7 +137,7 @@ if(isset($_POST['submit'])){
           </form>
         </main>
         <footer class="flx row">
-          <span class="copyw">Copyright &copy; 30DaysOfCode 2020</span>
+          <span class="copyw">Copyright &copy; JSMinna Internship 2020</span>
           <div>
             <a href="">Privacy Policy</a><a href="">Terms &amp; Conditions</a>
           </div>
