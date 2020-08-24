@@ -73,7 +73,7 @@ if (isset($_SESSION['isSuperAdmin']) && $_SESSION['isSuperAdmin'] == true) {
     <main class="flx col">
       <form class="mainCard">
       <?php
-        $sql = "SELECT * FROM submissions WHERE `cohort` = '$cohort' ORDER BY points ASC";
+        $sql = "SELECT * FROM submissions ORDER BY points ASC";
         $result = mysqli_query($conn, $sql);
         $count = mysqli_num_rows($result);
         ?>
@@ -87,7 +87,7 @@ if (isset($_SESSION['isSuperAdmin']) && $_SESSION['isSuperAdmin'] == true) {
           <tr>
             <th scope="col">S/N</th>
             <th scope="col">Email</th>
-            <th scope="col">Level</th>
+           
             <th scope="col">Submission for Day</th>
             <th scope="col">Points</th>
             <th scope="col">Delete</th>
@@ -102,7 +102,7 @@ if (isset($_SESSION['isSuperAdmin']) && $_SESSION['isSuperAdmin'] == true) {
           <tr>
               <td data-label="S/N"><?php echo $j;?></td>
               <td data-label="Email"><a href="view.php?id=<?php echo $row['id'];?>"><?php echo $row['user'];?></a></td>
-              <td data-label="Level"><?php echo $row['level'];?></td>
+             
               <td data-label="Submission For Day"><?php echo $row['task_day'];?></td>
               <td data-label="Points"><?php echo $row['points'];?></td>
               <td><a href="delete_It.php?delId=<?=$row['id']?>">Delete</a></td>
@@ -118,7 +118,7 @@ if (isset($_SESSION['isSuperAdmin']) && $_SESSION['isSuperAdmin'] == true) {
       </div>
       </form >
      </main>
-     <footer class="flx row"><span class="copyw">Copyright &copy; 30DaysOfCode 2020</span> <div><a href="">Privacy Policy</a><a href="">Terms &amp; Conditions</a></div></footer>
+     <footer class="flx row"><span class="copyw">Copyright &copy; JSMinna Internship 2020</span> <div><a href="">Privacy Policy</a><a href="">Terms &amp; Conditions</a></div></footer>
    </div>
  </div>
  <script src="../assets/js/app.js"></script>

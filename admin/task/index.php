@@ -41,7 +41,7 @@ if(isset( $_SESSION['login_user']) && $_SESSION['isAdmin'] == true){
        <ul class="linksContainer">
         <li class="flx row active">
          <img src="../../assets/img/profileWT.png">
-         <a href="../../user">User Dashboard</a>
+         <a href="../../admin">Admin Dashboard</a>
         </li>
         <!-- <li class="flx row">
          <img src="../../assets/img/add.png">
@@ -57,7 +57,7 @@ if(isset( $_SESSION['login_user']) && $_SESSION['isAdmin'] == true){
         </li>
         <li class="flx row">
          <img src="../../assets/img/podium.png">
-         <a href="../leaderboard">Leaderboard</a>
+         <a href="../../leaderboard">Leaderboard</a>
         </li>
         <!-- <li class="flx row">
          <img src="../../assets/img/twitter.png">
@@ -90,7 +90,7 @@ if(isset( $_SESSION['login_user']) && $_SESSION['isAdmin'] == true){
      
    
      </main>
-     <footer class="flx row"><span class="copyw">Copyright &copy; 30DaysOfCode 2020</span> <div><a href="">Privacy Policy</a><a href="">Terms &amp; Conditions</a></div></footer>
+     <footer class="flx row"><span class="copyw">Copyright &copy; JSMinna Internship 2020</span> <div><a href="">Privacy Policy</a><a href="">Terms &amp; Conditions</a></div></footer>
    </div>
  </div>
  <script src="../../assets/js/app.js"></script>

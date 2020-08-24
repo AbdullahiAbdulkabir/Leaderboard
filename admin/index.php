@@ -42,7 +42,7 @@ if(isset( $_SESSION['login_user']) && $_SESSION['isAdmin'] == true){
        <ul class="linksContainer">
         <li class="flx row active">
          <img src="../assets/img/profileWT.png">
-         <a href="../user">User Dashboard</a>
+         <a href="../admin">Admin Dashboard</a>
         </li>
         <!-- <li class="flx row">
          <img src="../assets/img/add.png">
@@ -110,8 +110,8 @@ if(isset( $_SESSION['login_user']) && $_SESSION['isAdmin'] == true){
             global $conn;
             
             $tracks = [
-              'Backend' => 'Backend',
-              'Frontend' => 'Frontend',
+              'backend' => 'backend',
+              'frontend' => 'frontend',
            
             ];
             foreach ($tracks as $track) {

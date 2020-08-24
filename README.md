@@ -33,3 +33,11 @@ HOW TO SET UP THIS PROJECT ONLINE (USING CPANEL)
 3. Create a mysql database and put the configurations in config/connect.php
 
 4. The project will be live at yourdomain.com
+
+#ACCESS LEVELS
+
+1. User
+
+2. Admin (add task only)
+
+3. Superadmin (grade task)

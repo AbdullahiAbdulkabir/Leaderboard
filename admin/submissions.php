@@ -38,7 +38,7 @@ if(isset( $_SESSION['login_user']) && $_SESSION['isAdmin'] == true){
        <ul class="linksContainer">
         <li class="flx row active">
          <img src="../assets/img/profileWT.png">
-         <a href="../user">User Dashboard</a>
+         <a href="../admin">User Dashboard</a>
         </li>
         <!-- <li class="flx row">
          <img src="../assets/img/add.png">
@@ -46,7 +46,7 @@ if(isset( $_SESSION['login_user']) && $_SESSION['isAdmin'] == true){
         </li> -->
         <li class="flx row">
          <img src="../assets/img/task.png">
-         <a href="/admin/task">View Tasks</a>
+         <a href="../admin/task">View Tasks</a>
         </li>
         <li class="flx row">
          <img src="../assets/img/lock.png">
@@ -77,7 +77,7 @@ if(isset( $_SESSION['login_user']) && $_SESSION['isAdmin'] == true){
       <?php
         $taskday = 'Day ' . $days;
         $current = date('Y-m-d');
-        $sql = "SELECT * FROM submissions WHERE track = '$track' AND `points` = 0 AND `cohort` = '$cohort' AND `task_day` = '$taskday'";
+        $sql = "SELECT * FROM submissions WHERE track = '$track' AND `points` = 0 AND `task_day` = '$taskday'";
         $result = mysqli_query($conn, $sql);
         $count = mysqli_num_rows($result);
         ?>
@@ -121,7 +121,7 @@ if(isset( $_SESSION['login_user']) && $_SESSION['isAdmin'] == true){
       <?php
         $taskday = 'Day ' . $days;
         $current = date('Y-m-d');
-        $sql = "SELECT * FROM submissions WHERE track = '$track' AND `points` = 0 AND `cohort` = '$cohort' AND `task_day` != '$taskday'";
+        $sql = "SELECT * FROM submissions WHERE track = '$track' AND `points` = 0  AND `task_day` != '$taskday'";
         $result = mysqli_query($conn, $sql);
         $count = mysqli_num_rows($result);
         ?>
@@ -160,7 +160,7 @@ if(isset( $_SESSION['login_user']) && $_SESSION['isAdmin'] == true){
       </div>
       </form >
      </main>
-     <footer class="flx row"><span class="copyw">Copyright &copy; 30DaysOfCode 2020</span> <div><a href="">Privacy Policy</a><a href="">Terms &amp; Conditions</a></div></footer>
+     <footer class="flx row"><span class="copyw">Copyright &copy; JSMinna Internship 2020</span> <div><a href="">Privacy Policy</a><a href="">Terms &amp; Conditions</a></div></footer>
    </div>
  </div>
  <script src="../assets/js/app.js"></script><script>

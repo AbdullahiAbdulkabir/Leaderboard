@@ -57,7 +57,7 @@ if(isset( $_SESSION['login_user']) && $_SESSION['isAdmin'] == true){
         </li>
         <li class="flx row">
          <img src="../assets/img/podium.png">
-         <a href="https://30daysofcode.xyz/leaderboard">Leaderboard</a>
+         <a href="../leaderboard">Leaderboard</a>
         </li>
         <li class="flx row">
          <img src="../assets/img/twitter.png">
@@ -65,7 +65,7 @@ if(isset( $_SESSION['login_user']) && $_SESSION['isAdmin'] == true){
         </li>
         <li class="flx row">
          <img src="../assets/img/whatsapp.png">
-         <a href="https://30daysofcode.xyz/whatsapp">Support group</a>
+         <a href="https://javascriptminna.coms/whatsapp">Support group</a>
         </li>
        </ul>
        <span id="email"><?=$_SESSION['login_user'];?></span>
@@ -90,7 +90,7 @@ while($row = $result->fetch_assoc()) {
     $result = mysqli_query($conn, $sql);
     if($result){
         $us = $row['user'];
-        $sql_check = "SELECT * FROM leaderboard WHERE email = '$u' AND track = '$track' AND level = '$level'";
+        $sql_check = "SELECT * FROM leaderboard WHERE email = '$u' AND track = '$track' ";
         $result_check = mysqli_query($conn, $sql_check);
         $count_check = mysqli_num_rows($result_check);
         $row_check = mysqli_fetch_array($result_check,MYSQLI_ASSOC);
@@ -139,6 +139,7 @@ while($row = $result->fetch_assoc()) {
   </div>
   <div class="field flx col">
     <label for="point">Point</label>
+    <small>Points max is 30</small>
     <input type="number" name="point" id="point" placeholder="Enter Point for This Submissions" required value="<?= $row['points'];?>">
   </div>
   <div class="field flx col">

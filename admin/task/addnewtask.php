@@ -85,12 +85,15 @@ if(isset( $_SESSION['login_user'])){
           $day = $_POST['day'];
           $track = $_POST['track'];
           $task = mysqli_real_escape_string($conn, $_POST['task']);
-          $sql = "INSERT INTO task(task_day, track, task, cohort) VALUES('$day', '$track', '$task', '$cohort')";
+          
+          $sql = "INSERT INTO task (task_day, track, task, level) VALUES ('$day', '$track', '$task','Beginner')";
+          // $result = $conn->query($sql);
           $result = mysqli_query($conn, $sql);
+         
           if ($result) {
               $error = "Task uploaded successfully";
           }else{
-              echo "Task has not uploaded";
+              echo "Task was not uploaded";
           }
       }
       ?>

@@ -47,7 +47,7 @@ if(isset( $_SESSION['login_user']) && $_SESSION['isAdmin'] == true){
         </li> -->
         <li class="flx row">
          <img src="../../assets/img/task.png">
-         <a href="/task/index.php">View Tasks</a>
+         <a href="../task/index.php">View Tasks</a>
         </li>
         <li class="flx row">
          <img src="../../assets/img/lock.png">
@@ -55,12 +55,12 @@ if(isset( $_SESSION['login_user']) && $_SESSION['isAdmin'] == true){
         </li>
         <li class="flx row">
          <img src="../../assets/img/podium.png">
-         <a href="../leaderboard">Leaderboard</a>
+         <a href="../../leaderboard">Leaderboard</a>
         </li>
-        <li class="flx row">
+        <!-- <li class="flx row">
          <img src="../../assets/img/twitter.png">
-         <!-- <a href=" https://twitter.com/intent/tweet?url=https%3A%2F%2F30daysofcodes.xyz&via=codon&text=Hello%2C%20I%20just%20finished%20my%20task%20for%20....&hashtags=30DaysOfCode%2C%20ECX">Tweet</a> -->
-        </li>
+         <a href=" https://twitter.com/intent/tweet?url=https%3A%2F%2F30daysofcodes.xyz&via=codon&text=Hello%2C%20I%20just%20finished%20my%20task%20for%20....&hashtags=30DaysOfCode%2C%20ECX">Tweet</a> 
+        </li> -->
         <li class="flx row">
          <img src="../../assets/img/whatsapp.png">
          <a href="https://javascriptminna.com/whatsapp">Support group</a>
@@ -75,7 +75,7 @@ if(isset( $_SESSION['login_user']) && $_SESSION['isAdmin'] == true){
         <legend>Tasks <a id="newBtn" href="addnewtask.php">Add new</a></legend>
       <?php
         $current = date('Y-m-d');
-        $sql = "SELECT * FROM task WHERE `track` = '$track' AND `cohort` = '$cohort' ORDER BY task_day";
+        $sql = "SELECT * FROM task WHERE `track` = '$track'  ORDER BY task_day";
         $result = mysqli_query($conn, $sql);
         $count = mysqli_num_rows($result);
     ?>
