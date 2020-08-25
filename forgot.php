@@ -23,13 +23,13 @@ if (isset($_POST['submit'])) {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Reset password - 30 Days of Code</title>
+    <title>Reset password - JSMinna Internship</title>
     <link rel="stylesheet" href="./assets/css/form.css" />
      <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon">
   </head>
   <body>
     <main class="body-content flex col">
-      <h1 id="home">30 DAYS OF CODE & DESIGN</h1>
+      <h1 id="home">JSMinna Internship</h1>
       <img src="./assets/img/lbs.png" alt="learnBuildShare" />
       <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>"  method="POST">
         <fieldset>

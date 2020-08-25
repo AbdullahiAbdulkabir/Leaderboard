@@ -15,7 +15,7 @@ if(isset( $_SESSION['login_user'])){
  <!-- <link rel="stylesheet" href="../../assets/css/submissions.css"> -->
  <link rel="stylesheet" href="../../assets/css/responsive.css">
  <link rel="shortcut icon" href="./../../assets/img/favicon.png" type="image/x-icon">
- <title>Dashboard - 30 Days Of Code</title>
+ <title>Dashboard - JSMinna Internship</title>
  <script src="https://cdn.tiny.cloud/1/f81u5amtw2l096zut1bx25hb08gty3ixwrax24i87te4eydg/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
         <script>
       tinymce.init({

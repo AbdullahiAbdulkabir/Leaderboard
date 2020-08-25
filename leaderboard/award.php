@@ -69,13 +69,13 @@
       href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap"
       rel="stylesheet"
     />
-    <title>30DOC Awards</title>
+    <title>JSMinna Awards</title>
   </head>
   <body class="flex col"> 
      <div id="startAnimate"></div>
     <main class="flex col">
       <h1 class="txt reg">
-        30 Days Of Code <span class="dispM">- FINAL RANKINGS</span>
+      JSMinna Internship<span class="dispM">- FINAL RANKINGS</span>
       </h1>
       <div class="card flex">
         <div class="top3-card">
