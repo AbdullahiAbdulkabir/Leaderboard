@@ -7,7 +7,7 @@ $error = '';
         // generate a 6 digit unique shortcode
         $tokens = substr(md5(uniqid(rand(), true)),0,6);
         //check if the shortcode has being assigned to another url...if yes....regenerate another unique code 
-        $query = "SELECT * FROM user WHERE `user_id` = '".$tokens."' ";
+        $query = "SELECT * FROM users WHERE `user_id` = '".$tokens."' ";
         $result = mysqli_query($conn, $query);
         $count = mysqli_num_rows($result);
         if ($count > 0) {
@@ -24,10 +24,12 @@ $error = '';
         $email = $_POST['email'];
         $password =  password_hash($_POST['password'], PASSWORD_DEFAULT);
         $phone = $_POST['phone'];
+        $track = $_POST['track'];
+        
 
         function check($email){	
             global $conn;
-            $queryURL = "SELECT email FROM user WHERE email = '$email'";
+            $queryURL = "SELECT email FROM users WHERE email = '$email'";
             $resultURL = mysqli_query($conn, $queryURL);
             $countURL = mysqli_num_rows($resultURL);
             if ($countURL == 0) {
@@ -38,8 +40,8 @@ $error = '';
         }
         $checkIt = check($email);
         if($checkIt){
-            $sql = "INSERT INTO user(`user_id`, `first_name`, `last_name`, `nickname`, `email`, `password`, `phone`) 
-                    VALUES('$user_id', '$first', '$last', '$nick', '$email', '$password', '$phone')";
+            $sql = "INSERT INTO users(`user_id`, `first_name`, `last_name`, `nickname`, `email`, `password`, `phone`,`track`) 
+                    VALUES('$user_id', '$first', '$last', '$nick', '$email', '$password', '$phone','$track')";
             if($conn->query($sql)){
             header("location:sign_in.php?message=success");
             }else{
@@ -56,14 +58,14 @@ $error = '';
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <meta http-equiv="X-UA-Compatible" content="ie=edge">
- <title>Sign up - 30 Days of Code</title>
+ <title>Sign up - JSMinna Internship</title>
  <link rel="stylesheet" href="./assets/css/form.css">
  <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon">
- <meta name="description" content="sign up for 30 days of code">
+ <meta name="description" content="sign up for JSMINNA">
  <meta property="og:type" content="website">
- <meta name="keywords" content="30 days of code, sign up, create account, engineering career expo, ECX, ecx, dsc unilag, code, design, competition">
- <meta property="og:url" content="https://30daysofcode.xyz">
- <meta property="og:site_name" content="30 days of code sign up">
+ <meta name="keywords" content="JSMINNA INTERNSHIP, sign up, create account, Jsminna">
+ <meta property="og:url" content="https://javascriptminna.com/internship.html">
+ <meta property="og:site_name" content="JSMINNA INTERNSHIP">
  <meta property="og:image" content="./assets/img/favicon.png">
 </head>
 <body>
@@ -75,7 +77,7 @@ $error = '';
     <?php }?>
 
 
-  <h1 id="home">30 DAYS OF CODE &amp; DESIGN</h1>
+  <h1 id="home"> <span style="color: #febf10;">JSMINNA </span> INTERNSHIP</h1>
   <img src="./assets/img/lbs.png" alt="learnBuildShare"/>
   <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="POST">
    <fieldset>
@@ -99,6 +101,13 @@ $error = '';
     <div class="field flex col">
      <label for="password">Password</label>
      <input type="password" name="password" id="password" required>     
+    </div>
+    <div class="field flex col">
+    <label for="password">Track</label>
+        <select name="track" value="">
+            <option value="backend">Backend</option>
+            <option value="frontend">Frontend</option>
+        </select>
     </div>
     <div class="field flex col">
      <label for="phone">Phone</label>

@@ -10,14 +10,14 @@
      if(isset($_POST['id'])){
         $count = count($_POST['id']);
         for($i=0; $i<$count; $i++){
-            $sql = "SELECT * FROM user WHERE `id` ='" . $_POST['id'][$i] . "'";
+            $sql = "SELECT * FROM users WHERE `id` ='" . $_POST['id'][$i] . "'";
             $result = $conn->query($sql);
             $rows = mysqli_num_rows($result);
             $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
             //if the user actually exist, and his paasword has not been hashed then hash it
         if($rows > 0 && !password_is_hash($row['password'])){
            $hash_password =  $hashed_password = password_hash($row['password'],PASSWORD_DEFAULT,array('cost'=>12));
-           $sql ="UPDATE user SET password ='$hash_password'  WHERE user.id=".$row['id'].";";
+           $sql ="UPDATE users SET password ='$hash_password'  WHERE users.id=".$row['id'].";";
            $result = $conn->query($sql);
            if(!$result){
                echo "hashing not successfull".$conn->error;
@@ -27,7 +27,7 @@
      }
   }
 }
- $sql = "SELECT * FROM `user`";
+ $sql = "SELECT * FROM `users`";
  $result = $conn->query($sql);
  $count = mysqli_num_rows($result);
 ?>

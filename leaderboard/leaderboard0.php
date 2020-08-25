@@ -33,16 +33,16 @@
       switch ($filter) {
         case 'General':
           $val = '';
-          $sql = "SELECT * FROM user WHERE `isAdmin` = 0 And `university`='$val' ORDER BY `score` DESC LIMIT 20";
+          $sql = "SELECT * FROM users WHERE `isAdmin` = 0 And `university`='$val' ORDER BY `score` DESC LIMIT 20";
           break;
 
         default:
-          $sql = "SELECT * FROM user WHERE `isAdmin` = 0 AND `university` ='$filter' ORDER BY `score` DESC LIMIT 20";
+          $sql = "SELECT * FROM users WHERE `isAdmin` = 0 AND `university` ='$filter' ORDER BY `score` DESC LIMIT 20";
           break;
       }
     }else{
       $val = '';
-      $sql = "SELECT * FROM user WHERE `isAdmin` = 0 And `university` = '$val' ORDER BY `score` DESC LIMIT 20";
+      $sql = "SELECT * FROM users WHERE `isAdmin` = 0 And `university` = '$val' ORDER BY `score` DESC LIMIT 20";
     }
     $result = mysqli_query($conn,$sql);
     if ($result) {
@@ -68,7 +68,7 @@
     <head>
       <link rel="stylesheet" href="./index.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-      <link rel="shortcut icon" href="https://30daysofcode.xyz/favicon.png" type="image/x-icon">
+      <link rel="shortcut icon" href="https://javascriptminna.com/favicon.png" type="image/x-icon">
     </head>
     <body>
       <div class="filter">

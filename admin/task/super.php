@@ -15,11 +15,11 @@ if(isset( $_SESSION['login_user']) && $_SESSION['isAdmin'] == true){
  <link rel="stylesheet" href="../../assets/css/submissions.css">
  <link rel="stylesheet" href="../../assets/css/responsive.css">
  <link rel="shortcut icon" href="../../assets/img/favicon.png" type="image/x-icon">
- <title>Dashboard - 30 Days Of Code</title>
+ <title>Dashboard - JSMinna Internship</title>
 </head>
 <body class="flx col">
  <header class="flx row">
-  <span>#30DaysOfCode</span>
+  <span>JSMinna Internship</span>
   <div class="profile flx col">
     <img src="../../assets/img/profile.png">
     <ul class="options">
@@ -46,7 +46,7 @@ if(isset( $_SESSION['login_user']) && $_SESSION['isAdmin'] == true){
         </li> -->
         <li class="flx row">
          <img src="../../assets/img/task.png">
-         <a href="/task">View Tasks</a>
+         <a href="../task">View Tasks</a>
         </li>
         <li class="flx row">
          <img src="../../assets/img/lock.png">
@@ -54,15 +54,12 @@ if(isset( $_SESSION['login_user']) && $_SESSION['isAdmin'] == true){
         </li>
         <li class="flx row">
          <img src="../../assets/img/podium.png">
-         <a href="https://30daysofcode.xyz/leaderboard">Leaderboard</a>
+         <a href="../leaderboard">Leaderboard</a>
         </li>
-        <li class="flx row">
-         <img src="../../assets/img/twitter.png">
-         <a href=" https://twitter.com/intent/tweet?url=https%3A%2F%2F30daysofcodes.xyz&via=codon&text=Hello%2C%20I%20just%20finished%20my%20task%20for%20....&hashtags=30DaysOfCode%2C%20ECX">Tweet</a>
-        </li>
+       
         <li class="flx row">
          <img src="../../assets/img/whatsapp.png">
-         <a href="https://30daysofcode.xyz/whatsapp">Support group</a>
+         <a href="https://javascriptminna.com/whatsapp">Support group</a>
         </li>
        </ul>
        <span id="email"><?=$_SESSION['login_user'];?></span>
@@ -115,7 +112,7 @@ if(isset( $_SESSION['login_user']) && $_SESSION['isAdmin'] == true){
       </div>
       </form >
      </main>
-     <footer class="flx row"><span class="copyw">Copyright &copy; 30DaysOfCode 2020</span> <div><a href="">Privacy Policy</a><a href="">Terms &amp; Conditions</a></div></footer>
+     <footer class="flx row"><span class="copyw">Copyright &copy; JSMinna Internship 2020</span> <div><a href="">Privacy Policy</a><a href="">Terms &amp; Conditions</a></div></footer>
    </div>
  </div>
  <script src="../../assets/js/app.js"></script>

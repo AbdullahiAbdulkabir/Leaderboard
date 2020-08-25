@@ -18,7 +18,7 @@ if(isset( $_SESSION['login_user'])){
  <!-- <link rel="stylesheet" href="../../assets/css/submissions.css"> -->
  <link rel="stylesheet" href="../../assets/css/responsive.css">
  <link rel="shortcut icon" href="./../../assets/img/favicon.png" type="image/x-icon">
- <title>Dashboard - 30 Days Of Code</title>
+ <title>Dashboard -  JSMinna Internship</title>
  <script src="https://cdn.tiny.cloud/1/f81u5amtw2l096zut1bx25hb08gty3ixwrax24i87te4eydg/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
         <script>
       tinymce.init({
@@ -29,7 +29,7 @@ if(isset( $_SESSION['login_user'])){
 </head>
 <body class="flx col">
  <header class="flx row">
-  <span>#30DaysOfCode</span>
+  <span>JSMinna Internship</span>
   <div class="profile flx col">
     <img src="../../assets/img/profile.png">
     <ul class="options">
@@ -64,7 +64,7 @@ if(isset( $_SESSION['login_user'])){
         </li>
         <li class="flx row">
          <img src="../../assets/img/podium.png">
-         <a href="https://30daysofcode.xyz/leaderboard">Leaderboard</a>
+         <a href="../leaderboard">Leaderboard</a>
         </li>
         <li class="flx row">
          <img src="../../assets/img/twitter.png">
@@ -72,7 +72,7 @@ if(isset( $_SESSION['login_user'])){
         </li>
         <li class="flx row">
          <img src="../../assets/img/whatsapp.png">
-         <a href="https://30daysofcode.xyz/whatsapp">Support group</a>
+         <a href="https://javascriptminna.com/whatsapp">Support group</a>
         </li>
        </ul>
        <span id="email"><?=$_SESSION['login_user'];?></span>
@@ -115,10 +115,9 @@ if(isset( $_SESSION['login_user'])){
         <div class="field flx col">
           <label for="level">Track</label>
           <select name="track" value="">
-          <option value="Frontend">Frontend</option>
-          <option value="Backend">Backend</option>
-          <option value="Mobile">Mobile</option>
-          <option value="ML">Machine Learning</option>
+          <option value="frontend">Frontend</option>
+          <option value="backend">Backend</option>
+ 
           </select>
         </div>
         <div class="field flx col">
@@ -135,7 +134,7 @@ if(isset( $_SESSION['login_user'])){
         ?>
     
      </main>
-     <footer class="flx row"><span class="copyw">Copyright &copy; 30DaysOfCode 2020</span> <div><a href="">Privacy Policy</a><a href="">Terms &amp; Conditions</a></div></footer>
+     <footer class="flx row"><span class="copyw">Copyright &copy;JSMinna Internship 2020</span> <div><a href="">Privacy Policy</a><a href="">Terms &amp; Conditions</a></div></footer>
    </div>
  </div>
  <script src="../../assets/js/app.js"></script>

@@ -34,7 +34,7 @@ if (isset($_GET['track']) and isset($_GET['level'])) {
     $track = $_GET['track'];
      $level = $_GET['level'];    
     
-     if ($track == 'backend' || $track == 'frontend' || $track == 'mobile' || $track == 'python' || $track == 'ui') {
+     if ($track == 'backend' || $track == 'frontend') {
        $sql = makeSQL($track,$level);
      }elseif($track == 'general'){
        $sql = makeSQL('general',$level);
@@ -68,7 +68,7 @@ $res =json_encode($userRanking);
     <head>
       <link rel="stylesheet" href="./index.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-      <link rel="shortcut icon" href="https://30daysofcode.xyz/favicon.png" type="image/x-icon">
+      <link rel="shortcut icon" href="https://javascriptminna.com/favicon.png" type="image/x-icon">
     </head>
     <body>
       <div class="filter">
@@ -88,8 +88,8 @@ $res =json_encode($userRanking);
           </select>
           <select name="level" id="level" class="form-control">
           <option value="general" id="levelNull">General</option>
-           <option value="beginner" id="beginner">Beginner</option>
-           <option value="intermediate" id="intermediate">Intermediate</option>
+           <!-- <option value="beginner" id="beginner">Beginner</option>
+           <option value="intermediate" id="intermediate">Intermediate</option> -->
           </select>
           <button type="submit" class="btn btn-warning">Filter</button>          
         </form>

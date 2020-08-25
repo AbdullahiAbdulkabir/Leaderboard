@@ -5,7 +5,7 @@ require('../config/session.php');
 include ('taskday.php');
 if(isset( $_SESSION['login_user'])){
     $tt = $_SESSION['login_user'];
-    $sql = "SELECT track FROM user WHERE email = '$tt'";
+    $sql = "SELECT track FROM users WHERE email = '$tt'";
     $result = mysqli_query($conn, $sql);
     $row =mysqli_fetch_assoc($result);
 ?>
@@ -22,11 +22,11 @@ if(isset( $_SESSION['login_user'])){
  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
 <meta http-equiv="Pragma" content="no-cache" />
 <meta http-equiv="Expires" content="0"/>
- <title>Submit task - 30 Days Of Code</title>
+ <title>Submit task - JSMinna Internship</title>
 </head>
 <body class="flx col">
  <header class="flx row">
-  <span>#30DaysOfCode</span>
+  <span>JSMinna Internship</span>
   <div class="profile flx col">
     <img src="../assets/img/profile.png">
     <ul class="options">
@@ -74,16 +74,16 @@ if(isset( $_SESSION['login_user'])){
         </li>
         <li class="flx row">
           <img src="../assets/img/podium.png" />
-          <a href="https://30daysofcode.xyz/leaderboard">Leaderboard</a>
+          <a href="../leaderboard">Leaderboard</a>
         </li>
         <li class="flx row">
           <img src="../assets/img/twitter.png" />
-          <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2F30daysofcodes.xyz&via=codon&text=Hello%2C%20I%20just%20finished%20my%20task%20for%20....&hashtags=30DaysOfCode%2C%20ECX">Tweet</a>
+          <!-- <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2F30daysofcodes.xyz&via=codon&text=Hello%2C%20I%20just%20finished%20my%20task%20for%20....&hashtags=30DaysOfCode%2C%20ECX">Tweet</a> -->
         </li>
 
         <li class="flx row">
           <img src="../assets/img/whatsapp.png" />
-          <a href="https://30daysofcode.xyz/whatsapp">Support group</a>
+          <a href="https://javascriptminna.com/whatsapp">Support group</a>
         </li>
         <li class="flx row">
           <img src="../assets/img/feedback.png" />
@@ -109,15 +109,13 @@ if(isset( $_SESSION['login_user'])){
 		          <select id="track" class="trackS" name="track" value="">
                 <option value="Backend">Backend</option>
                 <option value="Frontend">Frontend</option>
-                <option value="Mobile">Mobile</option>
-                <option value="ML">Machine Learning</option>
-                <option value="GIS">GIS</option>
+             
               </select>
             </div>
             <div class="field flx col">
               <label for="url">URL</label>
               <input id="url" type="url" name="url" placeholder="Enter URL" required>
-              <p style="font-size: 12px; margin-top: 8px; line-height: 110%; color: #646464;"><a href="https://github.com/geektutor/Leaderboard/blob/master/submission_guide.md">Submission Guidelines</a></p>
+              <p style="font-size: 12px; margin-top: 8px; line-height: 110%; color: #646464;"><a href="#">Submission Guidelines</a></p>
             </div>
             <div class="field flx col">
               <label for="comment">Comments?</label>
@@ -134,7 +132,7 @@ if(isset( $_SESSION['login_user'])){
           </div>
         </form>
      </main>
-     <footer class="flx row"><span class="copyw">Copyright &copy; 30DaysOfCode 2020</span> <div><a href="">Privacy Policy</a><a href="">Terms &amp; Conditions</a></div></footer> 
+     <footer class="flx row"><span class="copyw">Copyright &copy; JSMinna Internship 2020</span> <div><a href="">Privacy Policy</a><a href="">Terms &amp; Conditions</a></div></footer> 
    </div>
  </div>
  <script src="../assets/js/app.js"></script>
@@ -147,7 +145,7 @@ if(isset( $_SESSION['login_user'])){
     var level = '';
     var comment = document.getElementById('comment').value;
     var name = document.getElementById('name').value;
-    var cohort = 2;
+    var cohort = 1;
     var today = new Date();
     var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
     var points;
@@ -164,7 +162,7 @@ if(isset( $_SESSION['login_user'])){
         success: function(data) {
           $('.notice2').toggle();
           $('.notice2').html(data);
-          $('.notice3').html('<p>Share on <a style="font-size: 16px;" href="https://twitter.com/intent/tweet?url=https%3A%2F%2F30daysofcode.xyz%2F&via=ecxunilag&text=Day <?= $days;?>%20of%2030%3A%20Check%20out%20my%20solution%20at%3A%20'+urls+'&hashtags=30DaysOfCode%2C%2030DaysOfDesign%2C%20ecxunilag">Twitter </a></p>')
+          $('.notice3').html('<p>Share on <a style="font-size: 16px;" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fjavascriptminna.com%2F&via=JavascriptMinna&text=Day <?= $days;?>%20of%2030%3A%20Check%20out%20my%20solution%20at%3A%20'+urls+'&hashtags=jsminnainternship%2C%202monthsoflearning%2C%20jsminna">Twitter </a></p>')
 
         },
         error: function() {}
