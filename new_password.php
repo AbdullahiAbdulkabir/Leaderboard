@@ -7,7 +7,7 @@ if (!isset($_SESSION['password_session']) || empty($_SESSION['password_session']
 if (isset($_POST['submit'])) {
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
     $email = $_SESSION['password_session'];
-    $sql = "UPDATE `user` SET `password` = '$password' WHERE `email`='$email'";
+    $sql = "UPDATE `users` SET `password` = '$password' WHERE `email`='$email'";
     $result = mysqli_query($conn,$sql);
     if ($result) {
        header('location:sign_in.php?message=success');
