@@ -107,8 +107,8 @@ if(isset( $_SESSION['login_user'])){
       		 <div class="field flx col">
       	    	<label for="track">Track</label>
 		          <select id="track" class="trackS" name="track" value="">
-                <option value="Backend">Backend</option>
-                <option value="Frontend">Frontend</option>
+                <option value="backend">Backend</option>
+                <option value="frontend">Frontend</option>
              
               </select>
             </div>
@@ -125,7 +125,7 @@ if(isset( $_SESSION['login_user'])){
             </div>
             <input type="hidden" id="task_day" name="task_day" value="<?= $days; ?>">
             <input type="hidden" id="name" name="name" value="<?= $_SESSION['login_user']; ?>">
-            <input type="hidden" name="cohort" value="<?=$cohort?>">
+            <input type="hidden" name="cohort" value="1">
             <button style="display: none;" class="submit" id="upload" type="submit" name="psubmit">Submit task</button>
             <button id="submitTask" type="submit" name="submit">SUBMIT TASK</button>
             <div class="prev_link"><a href="newsubmit.php"><--&nbsp; Previous days</a></div>

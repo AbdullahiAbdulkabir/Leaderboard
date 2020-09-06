@@ -8,7 +8,7 @@ if(isset($_POST['submit'])){
     $show = 1;
     $task_day = mysqli_real_escape_string($conn, $_POST['task_day']);
     $track = mysqli_real_escape_string($conn, $_POST['track']);
-    $sql = "SELECT * FROM task WHERE track = '$track' AND `task_day` <= '$task_day' AND `cohort` = '$cohort' ORDER BY task_day DESC";
+    $sql = "SELECT * FROM task WHERE track = '$track' AND `task_day` <= '$task_day' ORDER BY task_day DESC";
     $resultTask = mysqli_query($conn,$sql);
 }
 ?>
@@ -105,8 +105,8 @@ if(isset($_POST['submit'])){
               <div class="field flx col">
                 <label for="track">Track</label>
                 <select name="track" value="">
-                  <option value="Backend">Backend</option>
-                  <option value="Frontend">Frontend</option>
+                  <option value="backend">Backend</option>
+                  <option value="frontend">Frontend</option>
                 </select>
                 <input type="hidden" name="task_day" value="<?= $days?>" />
               </div>

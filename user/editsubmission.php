@@ -18,7 +18,7 @@ if (!isset($_SESSION['login_user']) || empty($_SESSION['login_user'])) {
   $count = mysqli_num_rows($res);
   $rw = mysqli_fetch_assoc($res);
 
-  $day = strtotime("2020-09-01");
+  $day = strtotime("2020-09-07");
   $currdates = date("Y-m-d");
   $currdate = strtotime($currdates);
   $diff = abs($currdate - $day);
@@ -148,10 +148,9 @@ if (!isset($_SESSION['login_user']) || empty($_SESSION['login_user'])) {
           <div class="field flx col">
             <label for="track">Track</label>
             <select class="form-control" name="track">
-              <option value="Backend" <?php echo ($rw['track'] == 'Backend')? 'selected' : ''; ?>>Backend</option>
-              <option value="Frontend" <?php echo ($rw['track'] == 'Frontend')? 'selected' : ''; ?>>Frontend</option>
-              <option value="Mobile" <?php echo ($rw['track'] == 'Mobile')? 'selected' : ''; ?>>Mobile</option>
-              <option value="ML" <?php echo ($rw['track'] == 'ML')? 'selected' : ''; ?>>ML</option>
+              <option value="backend" <?php echo ($rw['track'] == 'Backend')? 'selected' : ''; ?>>Backend</option>
+              <option value="frontend" <?php echo ($rw['track'] == 'Frontend')? 'selected' : ''; ?>>Frontend</option>
+           
           </select>
           </div>
           <div class="field flx col">

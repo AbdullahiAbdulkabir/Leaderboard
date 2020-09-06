@@ -116,8 +116,8 @@ if(isset( $_SESSION['login_user'])){
 		        <div class="field flx col">
 	    	      <label for="track">Track</label>
   		        <select id="track" class="trackS" name="track" value="">
-                <option value="Backend">Backend</option>
-                <option value="Frontend">Frontend</option>
+                <option value="backend">Backend</option>
+                <option value="frontend">Frontend</option>
                 
             </select>
             </div>

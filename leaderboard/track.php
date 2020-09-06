@@ -62,10 +62,7 @@
             <option id="overall" value="Overall">Overall Rankings</option>
             <option id="frontend" value="Frontend">Frontend</option>
             <option id="backend" value="Backend">Backend</option>
-            <option id="design" value="Design">Engineering Design</option>
-            <option id="ui" value="UI">UI/UX</option>
-            <option id="python" value="Python">Python</option>
-            <option id="android" value="Android">Android</option>
+           
           </select>
           <button type="submit" class="btn btn-warning">Filter</button>
         </form>
