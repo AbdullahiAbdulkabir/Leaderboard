@@ -115,16 +115,7 @@ if(isset( $_SESSION['login_user'])){
           <label for="track">Track</label>
           <input type="text" name="track" value="<?=$_SESSION['track'];?>" readonly>
         </div>
-        <!-- <div class="field flx col">
-          <label for="level">Track</label>
-          <select name="track" value="">
-            <option value="backend">Backend</option>
-            <option value="frontend">Frontend</option>
-            <option value="mobile">Mobile</option>
-            <option value="python">Python</option>
-            <option value="ui">UI/UX</option>
-          </select>
-        </div> -->
+    
         <div class="field flx col">
         <label for="feedbaack">Task</label>
           <textarea name="task" id="mytextarea" placeholder="Enter the task" rows="7"></textarea>
