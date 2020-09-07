@@ -139,7 +139,7 @@ while($row = $result->fetch_assoc()) {
   </div>
   <div class="field flx col">
     <label for="point">Point</label>
-    <small>Points max is 30</small>
+    <small>Points max is 13</small>
     <input type="number" name="point" id="point" placeholder="Enter Point for This Submissions" required value="<?= $row['points'];?>">
   </div>
   <div class="field flx col">
