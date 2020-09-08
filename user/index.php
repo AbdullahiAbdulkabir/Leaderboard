@@ -128,7 +128,7 @@ if(isset( $_SESSION['login_user'])){
             ?>
              </div>        
          <div class="unmarked-card">
-  <table>
+  <!-- <table>
     <thead>
       <tr>
         <th scope="col">TRACK</th>
@@ -136,24 +136,24 @@ if(isset( $_SESSION['login_user'])){
       </tr>
     </thead>
     <tbody>
-      <?php
-            global $conn;
+        
+            // global $conn;
             
-            $tracks = [
-              'Backend' => 'Backend',
-              'Frontend' => 'Frontend'
-            ];
-            foreach ($tracks as $track) {
-                $track_submission = "SELECT * FROM submissions WHERE track = '$track' AND points = 0 ORDER BY track";
-                $result = mysqli_query($conn, $track_submission);
-                $count = mysqli_num_rows($result);
-                echo '<tr>';
-                echo '<td>'.$track.'</td>';
-                echo '<td>'.$count++.'</td>';
-            }           
-            ?>
+            // $tracks = [
+            //   'Backend' => 'Backend',
+            //   'Frontend' => 'Frontend'
+            // ];
+            // foreach ($tracks as $track) {
+            //     $track_submission = "SELECT * FROM submissions WHERE track = '$track' AND points = 0 ORDER BY track";
+            //     $result = mysqli_query($conn, $track_submission);
+            //     $count = mysqli_num_rows($result);
+            //     echo '<tr>';
+            //     echo '<td>'.$track.'</td>';
+            //     echo '<td>'.$count++.'</td>';
+            // }           
+            // ?>
     </tbody>
-  </table>
+  </table> -->
 </div>
         </main>
         <footer class="flx row">
