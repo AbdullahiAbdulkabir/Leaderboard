@@ -84,7 +84,7 @@ if(isset( $_SESSION['login_user']) && $_SESSION['isAdmin'] == true){
          <thead>
           <tr>
             <th scope="col">S/N</th>
-            <th scope="col">Day</th>
+            <th scope="col">TASK</th>
             <th scope="col">Track</th>
             <th scope="col">Task</th>
             <th scope="col">Action</th>

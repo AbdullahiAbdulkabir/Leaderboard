@@ -4,7 +4,7 @@ require('../config/connect.php');
 require('../config/session.php');
 if(isset( $_SESSION['login_user'])){
     $tt = $_SESSION['login_user'];
-    $sql = "SELECT track FROM user WHERE email = '$tt'";
+    $sql = "SELECT track FROM users WHERE email = '$tt'";
     $result = mysqli_query($conn, $sql);
     $row =mysqli_fetch_assoc($result);
 
