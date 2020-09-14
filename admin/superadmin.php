@@ -77,7 +77,7 @@ if (isset($_SESSION['isSuperAdmin']) && $_SESSION['isSuperAdmin'] == true) {
         $result = mysqli_query($conn, $sql);
         $count = mysqli_num_rows($result);
         ?>
-        <legend>Submissions</legend>
+        <legend>Submissions <strong style="color:red"> Pls ensure to mark only the ones that are 0, all others with point 1 upwards are graded. </strong> </legend> 
        <div class="table-responsive">
         <div class="field fix col">
           <input class="" type="text" id="myInput" onkeyup="filterTable()" placeholder="Search for email..">
