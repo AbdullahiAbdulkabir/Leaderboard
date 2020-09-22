@@ -32,7 +32,7 @@ include './config/connect.php';
     }
     function update_total($email, $total){
         global $conn;
-        $query = "UPDATE users SET score = $total WHERE `email` = '$email' ";
+        $query = "UPDATE leaderboard SET score = $total WHERE `email` = '$email' ";
         $result = mysqli_query($conn, $query);
         if($conn->query($query)){
             return 1;

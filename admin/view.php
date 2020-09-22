@@ -6,7 +6,33 @@ if(isset( $_SESSION['login_user']) && $_SESSION['isAdmin'] == true){
     $sql = "SELECT * FROM submissions WHERE id = '$id'";
     $result = mysqli_query($conn, $sql);
     $count = mysqli_num_rows($result);
-
+    
+ // functions
+ function total_score($email){   
+  global $conn;
+  $queryURL = "SELECT `points` FROM submissions WHERE `user` = '$email' ";
+  $resultURL = mysqli_query($conn, $queryURL);
+  $countURL = mysqli_num_rows($resultURL);
+  $total = 0;
+  if ($countURL > 0) {
+      while($row = mysqli_fetch_assoc($resultURL)) {
+          $total += $row['points'];
+      }
+      return $total;
+  }else{
+      return $total;
+  }
+}
+function update_total($email, $total){
+  global $conn;
+  $query = "UPDATE leaderboard SET score = $total WHERE `email` = '$email' ";
+  $result = mysqli_query($conn, $query);
+  if($conn->query($query)){
+      return 1;
+  }else{
+      return 0;
+  }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -94,11 +120,16 @@ while($row = $result->fetch_assoc()) {
         $result_check = mysqli_query($conn, $sql_check);
         $count_check = mysqli_num_rows($result_check);
         $row_check = mysqli_fetch_array($result_check,MYSQLI_ASSOC);
-        $total = intval($point) + intval($row_check['score']);
+        // shit here
+        $total = total_score($u);
+        
+        // $total = intval($point) + intval($row_check['score']);
         $LId = $row_check['id'];
         if ($count_check > 0) {
-            $sql_up = "UPDATE leaderboard SET score = '$total' WHERE id = '$LId' ";
-            $result_up = mysqli_query($conn, $sql_up);
+            // $sql_up = "UPDATE leaderboard SET score = '$total' WHERE id = '$LId' ";
+            $result_up = update_total($u, $total);
+            // $result_up = mysqli_query($conn, $sql_up);
+            // the magic
             // $count_up = mysqli_num_rows($result_up);
         }else{
             $sql_nick = "SELECT * FROM users WHERE email = '$us'";
@@ -115,6 +146,8 @@ while($row = $result->fetch_assoc()) {
         }else{
            $error = "Could not update user";
         }
+
+       
     } else {
         $error = "Could not update sub";
     }
